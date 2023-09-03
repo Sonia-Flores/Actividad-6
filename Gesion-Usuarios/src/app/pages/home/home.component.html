@@ -1,1 +1,11 @@
-<p>home works!</p>
+<section class="container mt-3">
+    <div class="row">
+        <a>Home</a>
+        <a [routerLink]="['/newuser']">Nuevo Usuario</a>
+    </div>
+    <div class="row">
+        <article class="col-12 col-md-6 col-lg-4" *ngFor="let user of arrUsers.results">
+            <app-user-card [miUser]="user"></app-user-card>
+        </article>
+    </div>
+</section>

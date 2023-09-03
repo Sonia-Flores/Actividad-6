@@ -9,14 +9,14 @@ import { IUser } from '../interfaces/user';
 })
 export class UserService {
 
-  baseUrl: string = 'https://peticiones.online/users/';
+  baseUrl: string = 'https://peticiones.online/api/users/';
   constructor(private httpClient:HttpClient) { }
 
   getAllUsers(): Promise<IAllUser>{
     return lastValueFrom(this.httpClient.get<IAllUser>(this.baseUrl));
   }
 
-  getUserById(id: number): Promise<IUser>{
+  getUserById(id: string): Promise<IUser>{
     return lastValueFrom(this.httpClient.get<IUser>(`${this.baseUrl}${id}`));
   }
 
@@ -25,10 +25,10 @@ export class UserService {
   }
 
   updateUser(formValue: IUser): Promise<IUser>{
-    return lastValueFrom(this.httpClient.post<IUser>(`${this.baseUrl}${formValue.id}`, formValue))
+    return lastValueFrom(this.httpClient.post<IUser>(`${this.baseUrl}${formValue._id}`, formValue))
   }
 
-  deleteUser(id: number): Promise<IUser>{
+  deleteUser(id: string): Promise<IUser>{
     return lastValueFrom(this.httpClient.delete<IUser>(`${this.baseUrl}${id}`));
   }
 }

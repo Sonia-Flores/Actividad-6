@@ -5,5 +5,5 @@ export interface IAllUser {
     per_page: number,
     total: number,
     total_pages: number,
-    data: IUser[]
+    results: IUser[]
 }
