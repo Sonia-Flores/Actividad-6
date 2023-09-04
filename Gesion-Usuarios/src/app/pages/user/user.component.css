@@ -1,0 +1,70 @@
+/* Estilos generales para la sección */
+.minh-100 {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container-info {
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la imagen */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Estilos para los títulos */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #060505;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #625a5a;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los botones */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+.btn-borrar {
+    background-color: #ef5350;
+    color: #fff;
+}
+
+.btn-actualizar {
+    background-color: #ffee58;
+    color: #333;
+}
+
+.btn-ver-listado {
+    background-color: #343a40;
+    color: #fff;
+}

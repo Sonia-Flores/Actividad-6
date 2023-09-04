@@ -1,22 +1,32 @@
-<section class="container mt-3">
-    <div class="row">
+<section class="container d-flex minh-100 mt-3">
+    <div class="row shadow align-self-center container-info">
         <div class="col-12 col-md-12 col-lg-6">
-            <img src="{{miUser.image}}" alt="card image">
+            <img class="img-fluid" src="{{miUser.image}}" alt="card image">
         </div>
-        <div class="col-12 col-md-12 col-lg-6">
-            <h5>{{miUser.first_name}}</h5>
-            <h5>{{miUser.last_name}}</h5>
-            <h5>Nombre Usuario: {{miUser.username}}</h5>
-            <h5>Email: {{miUser.email}}</h5>
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <a class="btn btn-danger" (click)="deleteUser(miUser._id)">Eliminar</a>
+        <div class="col-12 col-md-12 col-lg-6 align-self-center vertical-line">
+            <div class="row mb-3">
+                <h2>{{miUser.first_name}}</h2>
+            </div>
+            <div class="row mb-3">
+                <h2>{{miUser.last_name}}</h2>
+            </div>
+            <div class="row mb-3">
+                <h3>Nombre Usuario: </h3>
+                <h2>{{miUser.username}}</h2>
+            </div>
+            <div class="row mb-3">
+                <h3>Email: </h3>
+                <h2>{{miUser.email}}</h2>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4 col-md-4">
+                    <a class="btn btn-borrar" (click)="deleteUser(miUser._id)">Eliminar</a>
                 </div>
-                <div class="col-md-4">
-                    <a class="btn btn-danger" [routerLink]="['/updateuser', miUser._id]">Actualizar</a>
+                <div class="col-4 col-md-4">
+                    <a class="btn btn-actualizar" [routerLink]="['/updateuser', miUser._id]">Actualizar</a>
                 </div>
-                <div class="col-md-4">
-                    <a class="btn btn-danger" [routerLink]="['/home']">Volver al listado</a>
+                <div class="col-4 col-md-4">
+                    <a class="btn btn-ver-listado" [routerLink]="['/home']">Volver al listado</a>
                 </div>
             </div>
         </div>

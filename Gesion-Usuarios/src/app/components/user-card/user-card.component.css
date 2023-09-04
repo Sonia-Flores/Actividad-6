@@ -1,0 +1,72 @@
+/* Estilos para la tarjeta */
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.card-img-top {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.3s ease; /* Efecto de hover para la imagen */
+}
+
+.card-img-top:hover {
+    transform: scale(1.05); /* Cambia el tamaño de la imagen al pasar el ratón */
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+/* Estilos para los botones */
+.btn {
+    padding: 8px 16px; 
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para los botones con colores personalizados */
+.btn-ver-detalle {
+    background-color: #90caf9; 
+    color: #333;
+}
+
+.btn-actualizar {
+    background-color: #ffee58;
+    color: #333;
+}
+
+.btn-borrar {
+    background-color: #ef5350; 
+    color: #fff;
+}
+
+.btn:hover {
+    filter: brightness(1.2); 
+}
+
+
+
+

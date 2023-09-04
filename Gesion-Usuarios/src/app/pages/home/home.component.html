@@ -1,10 +1,31 @@
 <section class="container mt-3">
     <div class="row">
-        <a [routerLink]="['/newuser']">Nuevo Usuario</a>
+        <div class="col-12">
+            <h1 class="mb-4">¡Anúnciate como Actor!</h1>
+            <p class="mb-4 welcome">Bienvenido a nuestra plataforma de anuncios para actores. Aquí puedes crear tu perfil y destacarte en la industria del entretenimiento.</p>
+            <div class="text-center">
+                <a class="btn btn-primary" [routerLink]="['/newuser']">Registrarme</a>
+            </div>
+        </div>
     </div>
     <div class="row">
-        <article class="col-12 col-md-6 col-lg-4" *ngFor="let user of arrUsers.results">
-            <app-user-card [miUser]="user"></app-user-card>
-        </article>
+        <div class="col-12">
+            <div class="user-cards d-flex justify-content-center align-items-center flex-wrap">
+                <div class="col-12 col-md-6 col-lg-4" *ngFor="let user of arrUsers.results">
+                    <app-user-card [miUser]="user"></app-user-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="company-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-3">Información de la Empresa</h2>
+                <p>Somos una empresa dedicada a promover y conectar a talentosos actores con oportunidades en la industria del entretenimiento. Nuestra misión es ayudarte a destacar y alcanzar tus metas en el mundo del espectáculo.</p>
+                <p>¡Únete a nuestra comunidad de actores hoy mismo y comienza a construir tu carrera!</p>
+            </div>
+        </div>
     </div>
 </section>

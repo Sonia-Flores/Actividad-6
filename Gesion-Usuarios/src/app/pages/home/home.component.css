@@ -1,0 +1,42 @@
+/* Estilos para la sección de inicio */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #343a40;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.btn-primary:hover {
+    background-color: #23272b;
+}
+
+/* Estilos para las tarjetas de usuario */
+.col-12.col-md-6.col-lg-4 {
+    margin-bottom: 20px;
+}
+
+.welcome {
+    text-align: center;
+}
+.company-info {
+    background-color: #e5e5e5;
+    padding: 30px 0;
+}
+
+
+
