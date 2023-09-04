@@ -1,1 +1,63 @@
-<p>form works!</p>
+<div>
+    <h1>
+        {{this.newUser ? "Nuevo Usuario": "Actualizar Usuario"}}
+    </h1>
+</div>
+
+<!--Sección de formulario-->
+<section class="formSection">
+    <form [formGroup]="userForm" (ngSubmit)="getDataForm()">
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <label for="first_name">Nombre Usuario:</label>
+                <input class="form-control" type="text" name="first_name" formControlName="first_name" placeholder="Introduce Nombre de usuario">
+                <div *ngIf=" submited && userForm.controls.first_name.errors?.required" class="error">
+                    El nombre es un campo requerido
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <label for="last_name">Apellido Usuario:</label>
+                <input class="form-control" type="text" name="last_name" formControlName="last_name" placeholder="Introduce Apellidos de usuario">
+                <div *ngIf=" submited && userForm.controls.last_name.errors?.required" class="error">
+                    Los apellidos es un campo requerido
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <label for="email">Email:</label>
+                <input class="form-control" type="text" name="email" formControlName="email" placeholder="Introduce email">
+                <div *ngIf=" submited && userForm.controls.email.errors?.required" class="error">
+                    El email es un campo requerido
+                </div>
+                <div *ngIf=" submited && userForm.controls.email.errors?.pattern" class="error">
+                    El email no tiene el formato correcto
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <label for="username">Username:</label>
+                <input class="form-control" type="text" name="username" formControlName="username" placeholder="Introduce Username">
+                <div *ngIf=" submited && userForm.controls.username.errors?.required" class="error">
+                    El username es un campo requerido
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <label for="image">Url Imagen:</label>
+                <input class="form-control" type="text" name="image" formControlName="image" placeholder="Introduce una url de imagen">
+                <div *ngIf=" submited && userForm.controls.image.errors?.required" class="error">
+                    La imagen es un campo requerido
+                </div>
+                <div *ngIf=" submited && userForm.controls.image.errors?.pattern" class="error">
+                    El campo imagen no es una url
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</section>
