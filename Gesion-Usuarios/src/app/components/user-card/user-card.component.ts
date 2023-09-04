@@ -15,8 +15,7 @@ export class UserCardComponent {
   router = inject(Router);
 
   async deleteUser(id: string): Promise<void>{
-    var option = confirm('¿Estás seguro de borrar este usuario?');
-    if(option == true){
+    if(confirm('¿Estás seguro de borrar este usuario?') == true){
       let response = await this.userService.deleteUser(id);
       if(response){
         alert('Usuario borrado correctamente');

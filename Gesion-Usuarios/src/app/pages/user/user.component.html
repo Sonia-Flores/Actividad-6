@@ -1,1 +1,24 @@
-<p>user works!</p>
+<section class="container mt-3">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-6">
+            <img src="{{miUser.image}}" alt="card image">
+        </div>
+        <div class="col-12 col-md-12 col-lg-6">
+            <h5>{{miUser.first_name}}</h5>
+            <h5>{{miUser.last_name}}</h5>
+            <h5>Nombre Usuario: {{miUser.username}}</h5>
+            <h5>Email: {{miUser.email}}</h5>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <a class="btn btn-danger" (click)="deleteUser(miUser._id)">Eliminar</a>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-danger" [routerLink]="['/updateuser', miUser._id]">Actualizar</a>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-danger" [routerLink]="['/home']">Volver al listado</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

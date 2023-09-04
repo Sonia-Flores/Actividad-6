@@ -25,7 +25,7 @@ export class UserService {
   }
 
   updateUser(formValue: IUser): Promise<IUser>{
-    return lastValueFrom(this.httpClient.post<IUser>(`${this.baseUrl}${formValue._id}`, formValue))
+    return lastValueFrom(this.httpClient.put<IUser>(`${this.baseUrl}${formValue._id}`, formValue))
   }
 
   deleteUser(id: string): Promise<IUser>{

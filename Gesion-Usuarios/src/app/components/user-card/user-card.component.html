@@ -1,9 +1,15 @@
-<div class="card shadow p-4 mb-4">
+<div class="card shadow p-4">
     <img class="card-img-top mb-2" src="{{miUser.image}}" alt="card image">
     <h5 class="card-title mb-2">{{miUser.first_name}} {{miUser.last_name}}</h5>
-    <div class="justify-content-center">
-        <a class="btn btn-danger" [routerLink]="['/user', miUser.id]">Ver Detalle</a>
-        <a class="btn btn-danger" [routerLink]="['/updateuser', miUser.id]">Actualizar</a>
-        <a class="btn btn-danger" (click)="deleteUser(miUser._id)">Borrar</a>
+    <div class="row">
+        <div class="col-4">
+            <a class="btn btn-danger" [routerLink]="['/user', miUser._id]">Ver Detalle</a>
+        </div>
+        <div class="col-4">
+            <a class="btn btn-danger" [routerLink]="['/updateuser', miUser._id]">Actualizar</a>
+        </div>
+        <div class="col-4">
+            <a class="btn btn-danger" (click)="deleteUser(miUser._id)">Borrar</a>
+        </div>
     </div>
 </div>
